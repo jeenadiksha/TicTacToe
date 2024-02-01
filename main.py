@@ -22,17 +22,16 @@ def printBoard(xState , zState):
 
 
 
-def checkWin(xState , zState):
-    xwins = [[0 , 1 , 2 ] , [3 , 4 , 5 ] , [ 6 , 7 , 8 ] , [ 0 , 3 , 6 ] , [ 1 , 4 , 7 ] , [ 2 , 5 , 8 ]  , [ 0 , 4 , 8 ] , [ 2 , 4 , 6 ]]
+def checkWin(xState, zState):
+    xwins = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]
     for win in xwins:
-        if(sum(xState[win[0]] , xState[win[1]] , xState[win[2]]) == 3):
+        if sum(xState[win[0]], xState[win[1]], xState[win[2]]) == 3:
             print("X won the match")
             return 1
-        if(sum(zState[win[0]] , zState[win[1]] , zState[win[2]]) == 3):
-            print("0 won the match")
+        if sum(zState[win[0]], zState[win[1]], zState[win[2]]) == 3:
+            print("O won the match")
             return 0
     return -1
-
 
 
 xState = [0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 ]
